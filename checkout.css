@@ -1,0 +1,60 @@
+/* Estilos para el Checkout */
+
+/* Cuerpo de la página de pago, eliminamos el padding si usaste alguno global */
+.checkout-body {
+    background-color: #F8F9FA; /* Un gris muy claro para el fondo */
+}
+
+/* Encabezado minimalista */
+.checkout-header {
+    border-bottom: 1px solid var(--color-claro);
+    padding: 1rem 0;
+    position: static; /* No debe ser sticky para evitar distracciones */
+}
+
+/* Main */
+.checkout-main {
+    padding-top: 3rem;
+    padding-bottom: 5rem;
+}
+
+/* Subtítulos de sección (Envío, Pago, Resumen) */
+.checkout-subtitle {
+    font-family: var(--font-titulos);
+    color: var(--color-oscuro);
+    border-bottom: 2px solid var(--color-medio);
+    padding-bottom: 0.5rem;
+    margin-top: 1.5rem;
+}
+
+/* Resumen del Pedido */
+.order-summary-list {
+    border-radius: 8px;
+    box-shadow: var(--sombra-suave);
+}
+
+.order-summary-list .list-group-item {
+    color: var(--color-grisaceo);
+}
+
+/* Línea de Total */
+.order-summary-list .list-group-item:last-child {
+    font-size: 1.2rem;
+    background-color: var(--color-lila) !important; /* Usamos tu color más claro */
+    color: var(--color-oscuro) !important;
+    font-weight: bold;
+}
+
+/* Botón Final de Pago (adaptamos el botón primary-btn al ancho completo) */
+.checkout-form .btn-lg {
+    margin-top: 2rem;
+    font-size: 1.2rem;
+}
+
+/* Footer de Pago */
+.checkout-footer {
+    padding: 1.5rem 0;
+    background-color: var(--color-oscuro);
+    color: var(--color-claro);
+    font-size: 0.9rem;
+}

@@ -1,0 +1,547 @@
+/* --- PASO 1: VARIABLES Y ESTILOS GLOBALES --- */
+:root {
+  /* Nueva Paleta DannCam: Teal y Menta */
+  --color-claro: #DCF3EC;   /* Muy claro, basado en Verde Menta (Para fondos claros) */
+  --color-lila: #C5DCD3;   /* Verde Opaco (Para fondo de Pre-order y acentos claros) */
+  --color-medio: #85C7DF;   /* Azul Claro/Cyan (Para acentos de formulario) */
+  --color-grisaceo: #58B4A6; /* Teal Medio (Color principal de texto y botón primario) */
+  --color-oscuro: #3C766B;  /* Teal Oscuro (Para títulos, footer, hover y botón secundario) */
+ 
+  /* Tipografía */
+  --font-titulos: 'Georgia', 'Times New Roman', Times, serif;
+  --font-cuerpo: 'Arial', 'Helvetica', sans-serif;
+ 
+  /* Efecto de Sombra (Hover, etc.) */
+  --sombra-suave: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+/* Reseteo Básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-cuerpo);
+  background-color: var(--color-claro);
+  color: var(--color-grisaceo);
+  line-height: 1.6;
+}
+
+p {
+    text-align: justify; 
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* --- PASO 2: ENCABEZADO (HEADER) Y NAVEGACIÓN --- */
+.header {
+  background-color: #FFFFFF;
+  border-bottom: 1px solid var(--color-claro);
+  padding: 1rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-family: var(--font-titulos);
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: var(--color-oscuro);
+  text-decoration: none;
+}
+
+.header-logo-img {
+  max-height: 40px;
+  width: auto;
+  display: block;
+  background-color: transparent;
+}
+
+.nav-list {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: var(--color-grisaceo);
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover, .nav-link.active {
+  color: var(--color-oscuro);
+}
+
+/* --- PASO 3: SECCIÓN HERO (BANNER) --- */
+.hero-section {
+  background-color: var(--color-claro);
+  padding: 4rem 0;
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+}
+
+.hero-section .container {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.hero-content {
+  flex: 1;
+}
+
+.hero-carousel {
+  flex: 1;
+  text-align: right;
+}
+
+.hero-carousel img {
+  max-width: 100%;
+  border-radius: 10px;
+  box-shadow: var(--sombra-suave);
+}
+
+h1 {
+  font-family: var(--font-titulos);
+  font-size: 3rem;
+  color: var(--color-oscuro);
+  margin-bottom: 1rem;
+}
+
+.hero-content p {
+  font-size: 1.1rem;
+  color: var(--color-grisaceo);
+  margin-bottom: 2rem;
+}
+
+/* --- PASO 4: ESTILOS DE BOTONES (CTA) --- */
+.btn {
+  padding: 0.8rem 1.8rem;
+  border: none;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  font-family: var(--font-cuerpo);
+  cursor: pointer;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.primary-btn {
+  background-color: var(--color-grisaceo);
+  color: #FFFFFF;
+}
+
+.primary-btn:hover {
+  background-color: var(--color-oscuro);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
+}
+
+.secondary-btn {
+  background-color: var(--color-oscuro);
+  color: #FFFFFF;
+}
+
+.secondary-btn:hover {
+  background-color: var(--color-grisaceo);
+}
+
+.btn-small {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.9rem;
+    margin-top: 1rem;
+}
+
+/* --- PASO 5: TÍTULOS DE SECCIÓN GENERALES --- */
+h2 {
+  font-family: var(--font-titulos);
+  font-size: 2.5rem;
+  color: var(--color-oscuro);
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+/* --- PASO 6: SECCIÓN DE FILOSOFÍA K-BEAUTY (#philosophy) --- */
+.philosophy-section {
+    padding: 6rem 0;
+    background-color: #FFFFFF; 
+}
+
+.philosophy-content {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+}
+
+.philosophy-image {
+    max-width: 50%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: var(--sombra-suave);
+}
+
+.philosophy-text {
+    max-width: 50%;
+}
+
+.philosophy-text h3 {
+    font-family: var(--font-titulos);
+    color: var(--color-oscuro);
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.philosophy-text p {
+    margin-bottom: 1.2rem;
+}
+
+.philosophy-text ul {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 2rem;
+}
+
+.philosophy-text ul li {
+    color: var(--color-grisaceo);
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+
+/* --- PASO 7: SECCIÓN DE PRODUCTOS SHOWCASE Y CATÁLOGO GRID (Alineación de Botones) --- */
+.features-section {
+  padding: 4rem 0;
+  background-color: #FFFFFF; 
+}
+
+.catalog-page-section {
+    padding: 4rem 0;
+    background-color: #FFFFFF;
+}
+
+.filter-bar .row {
+    align-items: flex-end;
+}
+
+.filter-title {
+    font-family: var(--font-titulos);
+    font-size: 1.1rem;
+    color: var(--color-oscuro);
+    margin-bottom: 0.5rem;
+}
+
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+}
+
+/* AJUSTE CLAVE: Alineación de Botones  */
+.product-item {
+    display: flex; 
+    flex-direction: column; 
+    justify-content: space-between; 
+    min-height: 400px; 
+    text-align: center;
+    padding: 1rem;
+    border: 1px solid var(--color-claro);
+    border-radius: 10px;
+    transition: box-shadow 0.3s ease;
+    background-color: #FFFFFF;
+}
+
+.product-item:hover {
+    box-shadow: var(--sombra-suave);
+}
+
+.product-img {
+    max-width: 100%;
+    height: auto;
+    width: 150px;
+    display: block; 
+    margin: 0 auto 1rem auto;
+    border-radius: 8px;
+    background-color: var(--color-claro);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.product-title {
+  font-size: 1.2rem;
+  color: var(--color-oscuro);
+  margin-bottom: 0.5rem;
+}
+
+.product-desc {
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+    color: var(--color-grisaceo);
+    line-height: 1.4;
+    flex-grow: 1; 
+}
+
+.product-price {
+    font-size: 1.4rem;
+    color: var(--color-oscuro);
+    margin-bottom: 0.5rem;
+}
+
+
+/* --- PASO 8: SECCIÓN DE PRODUCTOS TOP (GALERÍA) --- */
+.gallery-section {
+  padding: 4rem 0;
+  background-color: #FFFFFF;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+
+.gallery-item {
+  width: 100%;
+    max-height: 300px;
+    object-fit: cover; 
+  border-radius: 8px;
+  box-shadow: var(--sombra-suave);
+  transition: transform 0.3s ease;
+}
+
+.gallery-item:hover {
+  transform: scale(1.03);
+}
+
+
+/* --- PASO 9: SECCIÓN DE CONTACTO (#contact) - FORMULARIO --- */
+.preorder-section {
+  padding: 4rem 0;
+  background-color: var(--color-lila); 
+}
+
+.contact-form {
+    max-width: 650px;
+    margin: 0 auto;
+    padding: 2rem;
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    box-shadow: var(--sombra-suave);
+}
+
+.contact-form .form-group {
+    margin-bottom: 1.5rem;
+}
+
+.contact-form label {
+    display: block;
+    font-weight: bold;
+    color: var(--color-oscuro);
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+    width: 100%;
+    padding: 0.9rem;
+    border: 1px solid var(--color-claro);
+    border-radius: 8px;
+    font-family: var(--font-cuerpo);
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+    resize: vertical;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border-color: var(--color-grisaceo);
+}
+
+.contact-form .btn-lg {
+    width: 100%;
+    padding: 1rem;
+    font-size: 1.1rem;
+}
+
+.subtitle {
+  text-align: center;
+  font-size: 1.1rem;
+  color: var(--color-oscuro);
+  margin-top: -2rem;
+  margin-bottom: 2rem;
+}
+
+
+/* --- PASO 10: PIE DE PÁGINA (FOOTER) - CON ICONOS FONT AWESOME --- */
+.footer {
+  background-color: var(--color-oscuro);
+  color: var(--color-lila);
+  padding: 2.5rem 0;
+}
+
+.footer .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.social-links {
+    display: flex;
+    gap: 1.5rem;
+}
+
+/* Estilo para los iconos de Font Awesome (<i>) */
+.social-links a {
+    color: var(--color-lila);
+    font-size: 1.5rem;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: #FFFFFF;
+}
+
+.copyright {
+    font-size: 0.9rem;
+}
+
+
+/* --- PASO 11: ESTILOS DE CHECKOUT (UNIFICADOS) --- */
+.checkout-body {
+    background-color: #F8F9FA;
+}
+
+.checkout-header {
+    border-bottom: 1px solid var(--color-claro);
+    position: static;
+}
+
+.checkout-main {
+    padding-top: 3rem;
+    padding-bottom: 5rem;
+}
+
+.checkout-subtitle {
+    font-family: var(--font-titulos);
+    color: var(--color-oscuro);
+    border-bottom: 2px solid var(--color-medio);
+    padding-bottom: 0.5rem;
+    margin-top: 1.5rem;
+}
+
+.order-summary-list {
+    border-radius: 8px;
+    box-shadow: var(--sombra-suave);
+}
+
+.order-summary-list .checkout-total-line {
+    font-size: 1.2rem;
+    background-color: var(--color-lila) !important;
+    color: var(--color-oscuro) !important;
+    font-weight: bold;
+}
+
+.checkout-footer {
+    padding: 1.5rem 0;
+    background-color: var(--color-oscuro);
+    color: var(--color-claro);
+    font-size: 0.9rem;
+}
+
+
+/* --- PASO 12: DISEÑO RESPONSIVE --- */
+
+/* Para Tablets (menos de 992px) */
+@media (max-width: 992px) {
+  .hero-section .container {
+    flex-direction: column;
+    text-align: center;
+  }
+ 
+    .philosophy-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .philosophy-image, .philosophy-text {
+        max-width: 100%;
+        width: 100%;
+    }
+    
+    .contact-form {
+        padding: 1.5rem;
+    }
+
+  .hero-content {
+    order: 2;
+  }
+ 
+  .hero-carousel {
+    order: 1;
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+ 
+  .feature-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Para Móviles (menos de 768px) */
+@media (max-width: 768px) {
+  h1 { font-size: 2.5rem; }
+  h2 { font-size: 2rem; }
+ 
+  .header .container {
+    flex-direction: column;
+    gap: 1rem;
+  }
+ 
+  .nav-list {
+    justify-content: center;
+    width: 100%;
+  }
+ 
+  .feature-grid {
+    grid-template-columns: 1fr;
+  }
+ 
+  .gallery-grid {
+    grid-template-columns: 1fr;
+  }
+ 
+  .footer .container {
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+  }
+ 
+  .social-links a {
+    margin: 0 0.5rem;
+  }
+    
+    /* Para el formulario de checkout en móvil */
+    .col-md-5.col-lg-4.order-md-last {
+        order: -1; 
+        margin-bottom: 2rem;
+    }
+}
